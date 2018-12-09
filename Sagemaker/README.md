@@ -8,6 +8,8 @@ Amazon SageMaker includes three modules: Build, Train, and Deploy. The Build mod
 
 ## References
 1. https://aws.amazon.com/sagemaker/features/
+2. https://aws.amazon.com/blogs/machine-learning/build-a-movie-recommender-with-factorization-machines-on-amazon-sagemaker/
+3. https://www.csie.ntu.edu.tw/~b97053/paper/Rendle2010FM.pdf
 
 
 [FAQ](FAQ.md)
