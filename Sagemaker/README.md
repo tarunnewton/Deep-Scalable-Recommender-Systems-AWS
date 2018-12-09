@@ -6,6 +6,16 @@ Amazon SageMaker is a fully managed service that allows developers and data scie
 
 Amazon SageMaker includes three modules: Build, Train, and Deploy. The Build module provides a hosted environment to work with your data, experiment with algorithms, and visualize your output. The Train module allows for one-click model training and tuning at high-scale and low cost. The Deploy module provides a managed environment for you to easily host and test models for inference securely and with low latency. 
 
+## Factorization Machines
+
+Factorization Machines (FM) are a supervised machine learning technique introduced in 2010. FM get their name from their ability to reduce problem dimensionality thanks to matrix factorization.
+
+Factorization machines can be used for classification or regression and are much more computationally efficient on large sparse data sets than traditional algorithms like linear regression. This property is why FM are widely used for recommendation. User count and item count are typically very large although the actual number of recommendations is very small (users don’t rate all available items!).
+
+Here’s a simple example: Where a sparse rating matrix (dimension 4×4) is factored into a dense user matrix (dimension 4×2) and a dense item matrix (2×4). As you can see, the number of factors (2) is smaller than the number of columns of the rating matrix (4). In addition, this multiplication also lets us fill all blank values in the rating matrix, which we can then use to recommend new items to any user.
+
+
+
 ## References
 1. https://aws.amazon.com/sagemaker/features/
 2. https://aws.amazon.com/blogs/machine-learning/build-a-movie-recommender-with-factorization-machines-on-amazon-sagemaker/
