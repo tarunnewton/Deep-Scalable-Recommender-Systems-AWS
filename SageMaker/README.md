@@ -21,6 +21,7 @@ Source: data-artisans.com
 1. https://aws.amazon.com/sagemaker/features/
 2. https://aws.amazon.com/blogs/machine-learning/build-a-movie-recommender-with-factorization-machines-on-amazon-sagemaker/
 3. https://www.csie.ntu.edu.tw/~b97053/paper/Rendle2010FM.pdf
+4. https://docs.aws.amazon.com/sagemaker/latest/dg/fact-machines.html
 
 
 [FAQ](FAQ.md)
