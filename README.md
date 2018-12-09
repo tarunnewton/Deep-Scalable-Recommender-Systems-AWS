@@ -4,7 +4,7 @@ Prototyping Deep Scalable Recommender Systems in AWS
 # Why is reccomender system important?
 
 # Business Value
-# PreProcessing Pipline
+# Preprocessing Pipeline
 # Two ways of implementation 
 
 1. Sagemaker
