@@ -16,6 +16,7 @@ Here’s a simple example: Where a sparse rating matrix (dimension 4×4) is fact
 
 ![Factorization](Factorization.png)
 
+Source: data-artisans.com
 
 ## References
 1. https://aws.amazon.com/sagemaker/features/
