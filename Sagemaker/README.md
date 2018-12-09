@@ -1,6 +1,6 @@
 
 
-# Amazon Sagemaker
+# Amazon SageMaker
 
 Amazon SageMaker is a fully managed service that allows developers and data scientists to build, train, and deploy machine learning models.
 
