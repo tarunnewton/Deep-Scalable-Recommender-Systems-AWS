@@ -1,4 +1,4 @@
-# Preprocessing Pipleline
+# Preprocessing Pipeline
 
 ## Data
 
