@@ -14,7 +14,7 @@ Factorization machines can be used for classification or regression and are much
 
 Here’s a simple example: Where a sparse rating matrix (dimension 4×4) is factored into a dense user matrix (dimension 4×2) and a dense item matrix (2×4). As you can see, the number of factors (2) is smaller than the number of columns of the rating matrix (4). In addition, this multiplication also lets us fill all blank values in the rating matrix, which we can then use to recommend new items to any user.
 
-![Alt tex            t](Factorization.png)
+![Factorization](Factorization.png)
 
 
 ## References
