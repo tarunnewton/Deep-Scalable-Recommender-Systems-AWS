@@ -1,12 +1,13 @@
-DSSTNE Walkthrough
-================
+# DSSTNE Walkthrough
 
 Amazon's GitHub page has a walkthrough on how to set up DSSTNE but we faced few challenges while following their implementation. Below we have given an overview of the steps we took to get DSSTNE running.
 
-## Launch an EC2 instance from AWS Marketplace
+## Setup
+
+### Launch an EC2 instance from AWS Marketplace
 
 Start an EC2 GPU-based instance from AWS marketplace. DSSTNE requires
-that the instance have CUDA and cuDNN and few other dependencies. This process is
+that the instance have CUDA, cuDNN and few other dependencies. This process is
 tedious but are multiple AMIs of DSSTNE available in the EC2 public instances which have all of the dependencies for building DSSTNE. AWS keeps releasing new versions of the same with minor updates and bug fixes and the most stable version was found by following the steps mentioned below. 
 
   - Select the instance *ami-43949554* from
