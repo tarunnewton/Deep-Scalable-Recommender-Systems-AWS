@@ -21,7 +21,7 @@ of the instance to handle DSSTNE.
 
   - Choose the GPU-based instance
 
-![DSSTNE_GPU](02_DSSTNE_GPU.png)
+![DSSTNE_GPU](02_DSSTNE_GPU.PNG)
 
   - Select the other attributes of the instance as per the requirement
     and launch it. For the purposes of this demo, only the storage was
@@ -30,7 +30,7 @@ of the instance to handle DSSTNE.
   - SSH into the cluster from the location where the private key is
     located
 
-![DSSTNE_SSH](Images/03_DSSTNE_SSH.PNG)
+![DSSTNE_SSH](03_DSSTNE_SSH.PNG)
 
 ## Running the recommender system
 
