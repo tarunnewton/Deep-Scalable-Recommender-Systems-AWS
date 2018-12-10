@@ -24,20 +24,23 @@ Without a doubt, big data is the driving force behind recommender systems. A goo
 
 ## Process Pipeline
 
-![Recommendation_system_pipeline](Images/Recommendation_system_pipeline.png)
+The below diagram represents a flow of a typical reccomender system. A recommender system primarily gets data for users and their preferences from transactions and the organization’s catalog. Additional data, like the type of device the customer used to access their catalog, can also be incorporated. The final recommendation list generated can either be consumed by the marketing department to tailor messages for their target segment, or is used for automatic distribution of content among users.
 
+![Recommendation_system_pipeline](Images/Recommendation_system_pipeline.png)
 Source: [Dzone](https://dzone.com/articles/powered-by-ai-how-to-use-recommendation-system-in)
 
-## Preprocessing Pipeline
+We used AWS to replicate parts of the above pipline. 
 
 ![AWS_Pipeline](Images/AWS_Pipeline.png)
 
-## Two ways of implementation 
+## Two ways of implementation based on complexity vs scalability
 
 1. Sagemaker
 2. DSSTNE
 
 ## Conclusion
+
+Based on 
 
 ## References
 1. https://www.mckinsey.com/industries/retail/our-insights/how-retailers-can-keep-up-with-consumers
