@@ -30,7 +30,7 @@ tedious but there are multiple AMIs of DSSTNE available in the EC2 public instan
 
 ![DSSTNE_SSH](03_DSSTNE_SSH.PNG)
 
-### Running the recommender system
+## Running the recommender system
 
 Since, the required components are already incorporated into the
 instance, we can directly proceed to the implementation of the
@@ -127,6 +127,6 @@ train -c config.json -i gl_input.nc -o gl_output.nc -n gl.nc -b 256 -e 10
 predict -b 256 -d gl -i features_input -o features_output -k 10 -n gl.nc -f ml-10m_ratings -s recs -r ml-10m_ratings
 ```
 
-#### Results
+## Results
 
 Using the 10 million movie review dataset DSSTNE takes 20 seconds which is 16 times faster than TensorFlow.
