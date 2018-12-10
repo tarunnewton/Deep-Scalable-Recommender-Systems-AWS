@@ -1,16 +1,13 @@
 DSSTNE Walkthrough
 ================
 
+Amazon's GitHub page has a walkthrough on how to set up DSSTNE but we faced few challenges while following their implementation. Below we have given an overview of the steps we took to get DSSTNE running.
+
 ## Launch an EC2 instance from AWS Marketplace
 
 Start an EC2 GPU-based instance from AWS marketplace. DSSTNE requires
-that the instance have CUDA and cuDNN enabled. Howver, this process is
-tedious and includes a lot of roadblocks. There are multiple AMIs of
-DSSTNE available in the EC2 public instances. However, AWS keeps
-releasing new versions of the same with minor updates and bug fixes.
-However, the most stable version of the solution was found by following
-the steps mentioned below. This procedure also skips the customization
-of the instance to handle DSSTNE.
+that the instance have CUDA and cuDNN and few other dependencies. This process is
+tedious but are multiple AMIs of DSSTNE available in the EC2 public instances which have all of the dependencies for building DSSTNE. AWS keeps releasing new versions of the same with minor updates and bug fixes and the most stable version was found by following the steps mentioned below. 
 
   - Select the instance *ami-43949554* from
     [here](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-43949554).
@@ -36,7 +33,7 @@ of the instance to handle DSSTNE.
 
 Since, the required components are already incorporated into the
 instnace, we can directly proceed to the implementation of the
-recommender system
+recommender system. For this example we will generate movie recommendations based on the [MovieLens](https://grouplens.org/datasets/movielens/) dataset.
 
   - Download data from the URL
 
@@ -110,10 +107,9 @@ generateNetCDF -d gl_output -i ml-10m_ratings -o gl_output.nc -f features_output
 
   - Training the neural network using the config.json file. This file
     can be used to tweak the number of layers, batch-size and the epochs
-    of the neural networks. The model file generated will be a .nc file.
+    of the neural networks. We will now train a 3-layer Neural Network with one 128 node hidden layer with Sigmoid as an activation   function as specified in the config.json file.The model file generated will be a .nc file.
     The model is currently generated using a batch size of 256 and epoch
-    of
-10
+    of 10
 
 <!-- end list -->
 
