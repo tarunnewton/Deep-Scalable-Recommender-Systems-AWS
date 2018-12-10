@@ -4,8 +4,8 @@
 
 ### Launch an EC2 instance from AWS Marketplace
 
-Start an EC2 GPU-based instance from AWS marketplace. We select a pre installed Tensorflow, 
-python, instance from the community AMI's by searching for tensorflow. This procedure also skips the customization of the instance to handle TensorFlow.
+Start an EC2 GPU-based instance from AWS marketplace. We select an instance with pre-installed Tensorflow, 
+python packages from the community AMI's by searching for tensorflow. This procedure also skips the customization of the instance to handle TensorFlow.
 
 We chose 'Deep Learning AMI (Ubuntu) Version 19.0 - ami-00fc7481b84be120b' AMI from [here](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#LaunchInstanceWizard:).
 This AMI has latest deep learning frameworks pre-installed: MXNet, TensorFlow, PyTorch, Keras, Chainer, Caffe/2, Theano & CNTK, configured with NVIDIA CUDA, cuDNN, NCCL & Intel MKL-DNN and is currently available in the us-east-1 region (N.Virginia in AWS Console).
@@ -15,7 +15,7 @@ This AMI has latest deep learning frameworks pre-installed: MXNet, TensorFlow, P
 
 Then chose the GPU based instance.
 
-![Select a gpu based instance](TF_GPU.PNG)
+![Select a GPU based instance](TF_GPU.PNG)
 
 Select the other attributes of the instance as per the requirement and
 launch it. For the purposes of this demo, only the storage was modified
@@ -28,7 +28,7 @@ SSH into the cluster from the location where the private key is located
 ## Code
 
 ### Downloading the dataset
-We download the 10millioin movie review dataset.
+We download the 10 million movie review dataset.
 
 
 ```{bash, eval=FALSE}
@@ -52,7 +52,7 @@ from sklearn.metrics import mean_squared_error as MSE
 
 ```
 
-We now read the ratings data and pivot that to get each rwview at a user level.
+We now read the ratings data and pivot that to get each review at a user level.
 
 ```{python, eval=FALSE, python.reticulate = FALSE}
 # reading the ratings data
@@ -65,7 +65,7 @@ X_train, X_test = train_test_split(ratings_pivot, train_size=0.8)
 ```
 
 
-Decide the number of nodes that needs to be set on each layers of the neural network.
+Decide the number of nodes that need to be set on each layer of the neural network.
 
 ```{python, eval=FALSE, python.reticulate = FALSE}
 # Deciding how many nodes each layer should have
@@ -118,7 +118,7 @@ hm_epochs =10    # how many times to go through the entire dataset
 tot_images = X_train.shape[0] # total number of images
 ```
 
-Running the model for a 10 epochs taking 256 users in batches.
+Running the model for 10 epochs taking 256 users in batches.
 
 ```{python, eval=FALSE, python.reticulate = FALSE}
 
@@ -157,7 +157,7 @@ Getting the time to train using %timeit.
 %timeit execute()
 ```
 
-for 10 million reviews we get '5min 19s ± 1.19 s per loop (mean ± std. dev. of 7 runs, 1 loop each)'time which is 16 times slower than DSSTNE.
+for 10 million reviews we get '5min 19s ± 1.19 s per loop (mean ± std. dev. of 7 runs, 1 loop each)' time which is 16 times slower than DSSTNE.
 
 
 ## References
