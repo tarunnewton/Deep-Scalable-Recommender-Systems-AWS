@@ -1,5 +1,5 @@
 # Deep Scalable Recommender Systems AWS
-Prototyping Deep Scalable Recommender Systems in AWS
+Our goal is to prototype deep scalable recommender systems on AWS
 
 ## What are recommender systems?
 Most of us have experienced the power of personalized recommendations firsthand. Maybe you found former colleagues and classmates with LinkedIn’s “People You May Know” feature. Perhaps you watched a movie because Netflix suggested it to you. And you’ve most likely bought something that Amazon recommended under “Frequently Bought Together” or “Customers Who Bought This”. Simply put it is a mechanism to recommend items or services to the customer based on their interests or of their look-a-likes to offer personalization. Below is an example of how product reccomendations look like in Amazon.
