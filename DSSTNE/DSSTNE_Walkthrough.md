@@ -4,9 +4,9 @@ DSSTNE Walkthrough
 ## Launch an EC2 instance from AWS Marketplace
 
 Start an EC2 GPU-based instance from AWS marketplace. DSSTNE requires
-that the instance have CUDA and CUDNN enabled. Howver, this process is
-tedious and includes a lot of roadblocks. There are multiple amis of
-DSSTNE avaialble in the EC2 public instances. However, AWS keeps
+that the instance have CUDA and cuDNN enabled. Howver, this process is
+tedious and includes a lot of roadblocks. There are multiple AMIs of
+DSSTNE available in the EC2 public instances. However, AWS keeps
 releasing new versions of the same with minor updates and bug fixes.
 However, the most stable version of the solution was found by following
 the steps mentioned below. This procedure also skips the customization
