@@ -158,3 +158,9 @@ Getting the time to train using %timeit.
 ```
 
 for 10 million reviews we get '5min 19s ± 1.19 s per loop (mean ± std. dev. of 7 runs, 1 loop each)'time which is 16 times slower than DSSTNE.
+
+
+## References
+
+1) https://medium.com/@connectwithghosh/recommender-system-on-the-movielens-using-an-autoencoder-using-tensorflow-in-python-f13d3e8d600d
+2) https://aws.amazon.com/blogs/machine-learning/get-started-with-deep-learning-using-the-aws-deep-learning-ami/
