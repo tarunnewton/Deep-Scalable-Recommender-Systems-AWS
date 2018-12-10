@@ -8,7 +8,7 @@ Amazon's GitHub page has a walkthrough on how to set up DSSTNE but we faced few 
 
 Start an EC2 GPU-based instance from AWS marketplace. DSSTNE requires
 that the instance have CUDA, cuDNN and few other dependencies. This process is
-tedious but are multiple AMIs of DSSTNE available in the EC2 public instances which have all of the dependencies for building DSSTNE. AWS keeps releasing new versions of the same with minor updates and bug fixes and the most stable version was found by following the steps mentioned below. 
+tedious but there are multiple AMIs of DSSTNE available in the EC2 public instances which have all of the dependencies for building DSSTNE. AWS keeps releasing new versions with minor updates and bug fixes, the most stable version was found by following the steps mentioned below. 
 
   - Select the instance *ami-43949554* from
     [here](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-43949554).
@@ -30,10 +30,10 @@ tedious but are multiple AMIs of DSSTNE available in the EC2 public instances wh
 
 ![DSSTNE_SSH](03_DSSTNE_SSH.PNG)
 
-## Running the recommender system
+### Running the recommender system
 
 Since, the required components are already incorporated into the
-instnace, we can directly proceed to the implementation of the
+instance, we can directly proceed to the implementation of the
 recommender system. For this example we will generate movie recommendations based on the [MovieLens](https://grouplens.org/datasets/movielens/) dataset.
 
   - Download data from the URL
@@ -126,3 +126,7 @@ train -c config.json -i gl_input.nc -o gl_output.nc -n gl.nc -b 256 -e 10
 ``` bash
 predict -b 256 -d gl -i features_input -o features_output -k 10 -n gl.nc -f ml-10m_ratings -s recs -r ml-10m_ratings
 ```
+
+#### Results
+
+Using the 10 million movie review dataset DSSTNE takes 20 seconds which is 16 times faster than TensorFlow.
