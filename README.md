@@ -26,6 +26,9 @@ There has been a large advancement of the algorthims in the reccomender system s
 ![Recommendation_system_pipeline](Images/Recommendation_system_pipeline.png)
 
 ## Preprocessing Pipeline
+
+![AWS_Pipeline](Images/AWS_Pipeline.png)
+
 ## Two ways of implementation 
 
 1. Sagemaker
