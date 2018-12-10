@@ -40,7 +40,7 @@ We used AWS to replicate parts of the above pipline.
 
 ## Conclusion
 
-Based on 
+We conclude that DSSTNE is complex and scalable while SageMaker is simple but hard to scale.
 
 ## References
 1. https://www.mckinsey.com/industries/retail/our-insights/how-retailers-can-keep-up-with-consumers
