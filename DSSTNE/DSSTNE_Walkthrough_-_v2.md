@@ -17,11 +17,11 @@ of the instance to handle DSSTNE.
     This AMI also includes NVIDIA drivers, and is currently available in
     the us-east-1 region (N.Virginia in AWS Console)
 
-\<Image 1\>
+![DSSTNE_Instance](Images/01_DSSTNE_Instance.png)
 
   - Choose the GPU-based instance
 
-\<Image 2\>
+![DSSTNE_GPU](Images/02_DSSTNE_GPU.png)
 
   - Select the other attributes of the instance as per the requirement
     and launch it. For the purposes of this demo, only the storage was
@@ -30,7 +30,7 @@ of the instance to handle DSSTNE.
   - SSH into the cluster from the location where the private key is
     located
 
-\<IMage 3\>
+![DSSTNE_SSH](Images/01_DSSTNE_SSH.png)
 
 ## Running the recommender system
 
