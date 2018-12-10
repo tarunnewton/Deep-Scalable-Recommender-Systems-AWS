@@ -107,8 +107,7 @@ generateNetCDF -d gl_output -i ml-10m_ratings -o gl_output.nc -f features_output
 ```
 
   - Training the neural network using the config.json file. This file
-    can be used to tweak the number of layers, batch-size and the epochs
-    of the neural networks. We will now train a 3-layer Neural Network with one 128 node hidden layer with Sigmoid as an activation   function as specified in the config.json file.The model file generated will be a .nc file.
+    can be used to tweak the number of layers, batch-size and the epochs of the neural networks. We will now train a 3-layer Neural Network with one 128 node hidden layer with Sigmoid as an activation function as specified in the config.json file. The model file generated will be a .nc file.
     The model is currently generated using a batch size of 256 and epoch
     of 10
 
