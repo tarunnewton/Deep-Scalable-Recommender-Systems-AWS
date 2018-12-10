@@ -1,4 +1,6 @@
-# Recommender System on TensorFlow Walkthrough
+# Recommender Systems on TensorFlow - Walkthrough
+
+To compare the performance of DSSTNE we built a recommender system on TensorFlow using the same network structure.
 
 ## Setup
 
@@ -25,11 +27,11 @@ SSH into the cluster from the location where the private key is located
     
 ![SSH syntax to login to ubuntu system](TF_SSH.PNG) 
 
-## Code
+## Running the recommender system
 
-### Downloading the dataset
-We download the 10 million movie review dataset.
+#### Downloading the dataset
 
+For this example, we will generate movie recommendations based on the [MovieLens](https://grouplens.org/datasets/movielens/) dataset.
 
 ```{bash, eval=FALSE}
 !wget http://files.grouplens.org/datasets/movielens/ml-10m.zip
@@ -37,7 +39,7 @@ We download the 10 million movie review dataset.
 !unzip ml-10m.zip
 ```
 
-We then import all the python libraries and tensorflow libraries required for a deep neural network.
+We then import all the python libraries and TensorFlow libraries required for a deep neural network.
 
 ```{python, eval = FALSE, python.reticulate = FALSE}
 # Importing tensorflow
@@ -156,8 +158,9 @@ Getting the time to train using %timeit.
 ```{python, eval=FALSE, python.reticulate = FALSE}
 %timeit execute()
 ```
+## Results
 
-for 10 million reviews we get '5min 19s ± 1.19 s per loop (mean ± std. dev. of 7 runs, 1 loop each)' time which is 16 times slower than DSSTNE.
+For 10 million reviews we get '5min 19s ± 1.19 s per loop (mean ± std. dev. of 7 runs, 1 loop each)' time which is 16 times slower than DSSTNE.
 
 
 ## References
