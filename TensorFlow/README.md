@@ -11,11 +11,11 @@ We chose 'Deep Learning AMI (Ubuntu) Version 19.0 - ami-00fc7481b84be120b' AMI f
 This AMI has latest deep learning frameworks pre-installed: MXNet, TensorFlow, PyTorch, Keras, Chainer, Caffe/2, Theano & CNTK, configured with NVIDIA CUDA, cuDNN, NCCL & Intel MKL-DNN and is currently available in the us-east-1 region (N.Virginia in AWS Console).
 
 
-![Selecting an AMI with tensorflow preinstalled](TF_AMI.png)
+![Selecting an AMI with tensorflow preinstalled](TF_AMI.PNG)
 
 Then chose the GPU based instance.
 
-![Select a gpu based instance](TF_GPU.png)
+![Select a gpu based instance](TF_GPU.PNG)
 
 Select the other attributes of the instance as per the requirement and
 launch it. For the purposes of this demo, only the storage was modified
@@ -23,7 +23,7 @@ to 200GB from the default values setup
 
 SSH into the cluster from the location where the private key is located
     
-![SSH syntax to login to ubuntu system](TF_SSH.png) 
+![SSH syntax to login to ubuntu system](TF_SSH.PNG) 
 
 ## Code
 
