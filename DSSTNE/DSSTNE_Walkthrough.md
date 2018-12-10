@@ -6,13 +6,13 @@ Amazon's GitHub page has a walkthrough on how to set up DSSTNE but we faced few 
 
 #### Launch an EC2 instance from AWS Marketplace
 
-Start an EC2 GPU-based instance from AWS marketplace. DSSTNE requires
+Start an EC2 GPU-based instance from the AWS marketplace. DSSTNE requires
 that the instance have CUDA, cuDNN and few other dependencies. This process is
 tedious but there are multiple AMIs of DSSTNE available in the EC2 public instances which have all of the dependencies for building DSSTNE. AWS keeps releasing new versions with minor updates and bug fixes, the most stable version was found by following the steps mentioned below. 
 
   - Select the instance *ami-43949554* from
     [here](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#LaunchInstanceWizard:ami=ami-43949554).
-    This AMI also includes NVIDIA drivers, and is currently available in
+    This AMI also includes NVIDIA drivers and is currently available in
     the us-east-1 region (N.Virginia in AWS Console)
 
 ![DSSTNE_Instance](01_DSSTNE_Instance.PNG)
@@ -32,9 +32,9 @@ tedious but there are multiple AMIs of DSSTNE available in the EC2 public instan
 
 ## Running the recommender system
 
-Since, the required components are already incorporated into the
+Since the required components are already incorporated into the
 instance, we can directly proceed to the implementation of the
-recommender system. For this example we will generate movie recommendations based on the [MovieLens](https://grouplens.org/datasets/movielens/) dataset.
+recommender system. For this example, we will generate movie recommendations based on the [MovieLens](https://grouplens.org/datasets/movielens/) dataset.
 
   - Download data from the URL
 
@@ -69,7 +69,7 @@ head ml-10m_ratings.dat
 
   - Convert the .dat data to a format that is recognized by
     generateNetCDF. The data should be structured such that the sample
-    name is followed by a tab character, and a list of the features
+    name is followed by a tab character and a list of the features
     delimited by a colon character(:)
 
 <!-- end list -->
@@ -96,7 +96,7 @@ This will create the following files:
 
 <!-- end list -->
 
-  - Generate the NetCDF output file which will be used to mapped to the
+  - Generate the NetCDF output file which will be used to map to the
     index of the sample file used for
 testing
 
