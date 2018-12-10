@@ -17,7 +17,7 @@ of the instance to handle DSSTNE.
     This AMI also includes NVIDIA drivers, and is currently available in
     the us-east-1 region (N.Virginia in AWS Console)
 
-![DSSTNE_Instance](01_DSSTNE_Instance.png)
+![DSSTNE_Instance](01_DSSTNE_Instance.PNG)
 
   - Choose the GPU-based instance
 
