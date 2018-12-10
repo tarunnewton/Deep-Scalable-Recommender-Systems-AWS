@@ -8,18 +8,22 @@ Most of us have experienced the power of personalized recommendations firsthand.
 
 ## Why are recommender system important?
 
-The age of search has come to an end. 
+The age of search has come to an end. Competitive advantage of companies are slowly changing from having all information to being able to reccomend relavent information to its users.
 
 - Chirs Anderson in “The Long Tail”:
 We are leaving the age of information and entering the age of 	recommendation
 
-- CNN Money, “The race to create a ‘smart’ Google”
+- CNN Money, “The race to create a ‘smart’ Google”:
 The Web, they say, is leaving the era of search and entering one of discovery. 	What's the difference? Search is what you do when you're looking for 	something. Discovery is when something wonderful that you didn't know existed, 	or didn't know how to ask for, finds you.
 
 
-Recommendation engines account for a huge share of revenue and user activity, often 30 to 50 percent, for instance 35 percent of what consumers purchase on Amazon and 75 percent of what they watch on Netflix come from product recommendations based on highly personalized marketing of which recommender systems play a large part.
+Recommendation engines account for a huge share of revenue and user activity, often 30 to 50 percent, for instance 35 percent of what consumers purchase on Amazon, 75 percent of what they watch on Netflix and 38% of visits on Google news links come from product recommendations based on highly personalized marketing of which recommender systems play a large part.
 
 ## Business Value
+
+There has been a large advancement of the algorthims in the reccomender system space but their scalable implementations are still lacking in some sense. A famous example is the $1 million prize that Netflix awarded to a developer team in 2009 for an algorithm that increased the accuracy of the company's recommendation engine by 10 percent. However Netflix never used the winning solution due to "engineering costs", according to Netflix the increase in accuracy on the winning improvements "did not seem to justify the engineering effort needed to bring them into a production environment," the blog post said. This highlights the importance of scaling reccomender systems. 
+
+
 ## Preprocessing Pipeline
 ## Two ways of implementation 
 
@@ -31,3 +35,4 @@ Recommendation engines account for a huge share of revenue and user activity, of
 ## References
 1. https://www.mckinsey.com/industries/retail/our-insights/how-retailers-can-keep-up-with-consumers
 2. https://medium.com/ai-society/a-concise-recommender-systems-tutorial-fa40d5a9c0fa
+3. https://www.wired.com/2012/04/netflix-prize-costs/
