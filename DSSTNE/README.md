@@ -19,30 +19,12 @@ are possible with a single GPU.
 * **Sparse Data**: DSSTNE is optimized for fast performance on sparse datasets, common in recommendation 
 problems. Custom GPU kernels perform sparse computation on the GPU, without filling in lots of zeroes.
 
-## Benchmarks
-* scottlegrand@ reported [near-linear scaling with multiple GPUs] on the MovieLens recommendation problem 
-(https://medium.com/@scottlegrand/first-dsstne-benchmarks-tldr-almost-15x-faster-than-tensorflow-393dbeb80c0f#.ghe74fu1q)
-* Directions on how to run a benchmark can be found in [here](benchmarks/Benchmark.md)
 
 ## Scaling up
 * [Using Spark in AWS EMR and Dockers in AWS ECS ](http://blogs.aws.amazon.com/bigdata/post/TxGEL8IJ0CAXTK/Generating-Recommendations-at-Amazon-Scale-with-Apache-Spark-and-Amazon-DSSTNE)
-    
-
-## License
-[License](LICENSE)
-
-
- 
- 
 
 ## Setup
-* Follow [Setup](docs/getting_started/setup.md) for step by step instructions on installing and setting up DSSTNE
+* Follow [DSSTNE_Walkthrough](DSSTNE_Walkthrough.md) for step by step instructions on installing and setting up DSSTNE
 
-## User Guide
-* Check [User Guide](docs/getting_started/userguide.md) for detailed information about the features in DSSTNE
-
-## Examples
-* Check [Examples](docs/getting_started/examples.md) to start trying your first Neural Network Modeling using DSSTNE
-
-## Q&A
-[FAQ](FAQ.md)
+## References
+1. https://github.com/amzn/amazon-dsstne
