@@ -24,7 +24,7 @@ problems. Custom GPU kernels perform sparse computation on the GPU, without fill
 * [Using Spark in AWS EMR and Dockers in AWS ECS ](http://blogs.aws.amazon.com/bigdata/post/TxGEL8IJ0CAXTK/Generating-Recommendations-at-Amazon-Scale-with-Apache-Spark-and-Amazon-DSSTNE)
 
 ## Setup
-* Follow [DSSTNE_Walkthrough](DSSTNE_Walkthrough.md) for step by step instructions on installing and setting up DSSTNE
+* Follow [DSSTNE Walkthrough](DSSTNE_Walkthrough.md) for step by step instructions on installing and setting up DSSTNE
 
 ## References
 1. https://github.com/amzn/amazon-dsstne
