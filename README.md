@@ -6,7 +6,7 @@ Most of us have experienced the power of personalized recommendations firsthand.
 
 ![Amazon Reccomendation Example](Images/Amazon_Page.png)
 
-## Why are recommender system important?
+## Why are recommender systems important?
 
 The age of search has come to an end. Competitive advantage of companies are slowly changing from having all information to being able to reccomend relavent information to its users.
 
