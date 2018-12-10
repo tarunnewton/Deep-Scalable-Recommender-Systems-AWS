@@ -21,11 +21,16 @@ are possible with a single GPU.
 * **Sparse Data**: DSSTNE is optimized for fast performance on sparse datasets, common in recommendation 
 problems. Custom GPU kernels perform sparse computation on the GPU, without filling in lots of zeroes.
 
+
+As mentioned above, DSSTNE was built to support large, sparse layers. One of the ways it does so is by supporting model parallel training. In model parallel training, the model is distributed across N GPUs – the dataset (e.g., RDD) is replicated to all GPU nodes. Contrast this with data parallel training where each GPU only trains on a subset of the data, then shares the weights with each other using synchronization techniques such as a parameter server.
+
 ## Setup
-* Follow [DSSTNE Walkthrough](DSSTNE_Walkthrough.md) for step by step instructions on installing and setting up DSSTNE
+* Follow [DSSTNE Walkthrough](DSSTNE_Walkthrough.md) for step by step instructions on setting up DSSTNE
 
 ## Scaling up
-* [Using Spark in AWS EMR and Dockers in AWS ECS ](http://blogs.aws.amazon.com/bigdata/post/TxGEL8IJ0CAXTK/Generating-Recommendations-at-Amazon-Scale-with-Apache-Spark-and-Amazon-DSSTNE)
+This [blog](http://blogs.aws.amazon.com/bigdata/post/TxGEL8IJ0CAXTK/Generating-Recommendations-at-Amazon-Scale-with-Apache-Spark-and-Amazon-DSSTNE) by Amazon has a detailed implementation of how to scale DSSTNE. In this architecture, data analytics and processing (i.e., CPU jobs) are executed through vanilla Spark on Amazon EMR, where the job is broken up into tasks and runs on a Spark executor. The GPU job above refers to the training or prediction of neural networks. The partitioning of the dataset for these jobs is done in Spark, but the execution of these jobs is delegated to ECS and is run inside Docker containers on the GPU slaves. Data transfer between the two clusters is done through Amazon S3.
+
+When a GPU job is run, it is broken down into one or more GPU tasks. Like Spark, a GPU task is assigned for each partition of the data RDD. The Spark executors save their respective partitions to S3, then call ECS to run a task definition with container overrides that specify the S3 location of its input partitions and the command to execute on the specified Docker image. 
 
 ## References
 1. https://github.com/amzn/amazon-dsstne
