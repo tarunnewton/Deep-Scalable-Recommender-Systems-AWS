@@ -33,6 +33,8 @@ The below diagram represents the flow of a typical recommender system. A recomme
 ![Recommendation_system_pipeline](Images/Recommendation_system_pipeline.png)
 Source: [Dzone](https://dzone.com/articles/powered-by-ai-how-to-use-recommendation-system-in)
 
+## Implementation on AWS
+
 We used AWS to replicate parts of the above pipeline. More information about the preprocessing elements of the pipeline can be found [here](Preprocessing_Pipeline.md).
 
 ![AWS_Pipeline](Images/AWS_Pipeline.png)
