@@ -19,7 +19,7 @@ Source: data-artisans.com
 
 ## Implementaton on AWS
 
-For this example, we will use Amazon SageMaker to generate movie recommendations based on the [MovieLens](https://grouplens.org/datasets/movielens/) dataset. A detailed walkthrough of our process can be found [here](Recommender System on Amazon Sagemaker.ipynb)
+For this example, we will use Amazon SageMaker to generate movie recommendations based on the [MovieLens](https://grouplens.org/datasets/movielens/) dataset. A detailed walkthrough of our process can be found [here](Recommender_System_on_Amazon_SageMaker.ipynb)
 
 ## Limitations
 
