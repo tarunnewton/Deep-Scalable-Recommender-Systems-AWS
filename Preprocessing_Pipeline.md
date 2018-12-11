@@ -80,7 +80,7 @@ The only change here would be accessing from the above picture is that we are op
 
 ![Fig12](Images/s3-001.png)
 
-![Fig14](Images/PS4.png)
+![Fig14](Images/PS4.PNG)
 
 The data is loaded into the bucket "525301199690-reinvent-2018-data"
 
