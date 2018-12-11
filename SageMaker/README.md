@@ -17,7 +17,12 @@ Here’s a simple example: Where a sparse rating matrix (dimension 4×4) is fact
 ![Factorization](Factorization.png)
 Source: data-artisans.com
 
+## Implementaton on AWS
+
+For this example, we will use Amazon SageMaker to generate movie recommendations based on the [MovieLens](https://grouplens.org/datasets/movielens/) dataset. A detailed walkthrough of our process can be found [here](Recommender System on Amazon Sagemaker.ipynb)
+
 ## Limitations
+
 
 ## References
 1. https://aws.amazon.com/sagemaker/features/
