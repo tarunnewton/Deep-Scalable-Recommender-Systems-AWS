@@ -63,7 +63,7 @@ The only change here would be accessing from the above picture is that we are op
 ## Verifying whether the load complete is successful 
 
 
-![Fig8](Images/PS2.png)
+![Fig8](Images/PS2.PNG)
 
 ## Looking at the tables on DynamoDB
 
@@ -140,7 +140,7 @@ def getRating(userId, itemId, ratingId, timestamp):
 ```
 
 
-![Fig17](Images/PS5.png)
+![Fig17](Images/PS5.PNG)
 
 ## Using Amazon Glue to transform the data from the S3 and DynamoDB 
 
