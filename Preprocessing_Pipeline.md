@@ -205,7 +205,7 @@ We are using the Amazon Glue to the following tasks to our tables:
 
 The tables in the Amazon Glue
 
-![Fig31](Images/PS6.png)
+![Fig31](Images/PS6.PNG)
 
 ###   Script to transform data from Glue
 ```{r GLUE, eval=FALSE }
