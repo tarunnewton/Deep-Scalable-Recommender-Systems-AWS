@@ -46,7 +46,7 @@ We used AWS to replicate parts of the above pipeline. More information about the
 
 ## Conclusion
 
-We conclude that DSSTNE is complex and scalable while SageMaker is simple but hard to scale.
+We conclude that DSSTNE is complex and scalable [vs TensorFlow](TensorFlow) while SageMaker is simple but hard to scale.
 
 ## References
 1. https://www.mckinsey.com/industries/retail/our-insights/how-retailers-can-keep-up-with-consumers
