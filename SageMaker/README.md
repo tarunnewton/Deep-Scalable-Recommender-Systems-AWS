@@ -17,6 +17,8 @@ Here’s a simple example: Where a sparse rating matrix (dimension 4×4) is fact
 ![Factorization](Factorization.png)
 Source: data-artisans.com
 
+## Limitations
+
 ## References
 1. https://aws.amazon.com/sagemaker/features/
 2. https://aws.amazon.com/blogs/machine-learning/build-a-movie-recommender-with-factorization-machines-on-amazon-sagemaker/
@@ -24,5 +26,3 @@ Source: data-artisans.com
 4. https://docs.aws.amazon.com/sagemaker/latest/dg/fact-machines.html
 5. https://medium.com/@julsimon/building-a-movie-recommender-with-factorization-machines-on-amazon-sagemaker-cedbfc8c93d8
 
-
-[FAQ](FAQ.md)
