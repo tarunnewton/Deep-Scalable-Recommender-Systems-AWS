@@ -73,7 +73,7 @@ The only change here would be accessing from the above picture is that we are op
 
 ## Reporting the results on Dynamo DB
 
-![Fig11](Images/PS3.png)
+![Fig11](Images/PS3.PNG)
 
 
 ## Accessing the S3 bucket
