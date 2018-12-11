@@ -1,4 +1,4 @@
-# Recommender Systems on TensorFlow - Walkthrough
+# Recommender Systems on TensorFlow
 
 To compare the performance of DSSTNE we built a recommender system on TensorFlow using the same network structure.
 
