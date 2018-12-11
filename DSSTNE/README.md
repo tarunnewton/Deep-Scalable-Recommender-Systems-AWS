@@ -34,6 +34,7 @@ When a GPU job is run, it is broken down into one or more GPU tasks. Like Spark,
 
 ## Limitations
 
+DSSTNE has a few limitations as well. This engine might be really good at providing faster recommendations on large datasets but implementing and optimizing this for our use case is time consuming. Amazon has provided a framework for this, but hasn’t really provided a lot of resources on how to implement and optimize the model. Also, Amazon has provisioned DSSTNE to run only on GPU’s. There is no way to run this on a CPU even for development and testing. Finally, the set-up instructions for this model is currently available only in Ubuntu and doesn’t support Windows or Mac. Few of these limitations might be because its relatively new and support may get added at a later stage.
 
 ## References
 1. https://github.com/amzn/amazon-dsstne
