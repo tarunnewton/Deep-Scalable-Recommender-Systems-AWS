@@ -32,5 +32,8 @@ This [blog](http://blogs.aws.amazon.com/bigdata/post/TxGEL8IJ0CAXTK/Generating-R
 
 When a GPU job is run, it is broken down into one or more GPU tasks. Like Spark, a GPU task is assigned for each partition of the data RDD. The Spark executors save their respective partitions to S3, then call ECS to run a task definition with container overrides that specify the S3 location of its input partitions and the command to execute on the specified Docker image. 
 
+## Limitations
+
+
 ## References
 1. https://github.com/amzn/amazon-dsstne
