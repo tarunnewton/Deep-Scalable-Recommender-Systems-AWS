@@ -38,67 +38,67 @@ Here we use the screenshots from the samples to show how the services have to in
 # Implementation on AWS
 
 ## Accessing the Cloud Formation Service in AWS
-![Fig1](Images/AWS Exploration\dms-001.png)
+![Fig1](Images/AWS Exploration/dms-001.png)
 
 
 ## Creating a stack on AWS
 
-![Fig2](Images/AWS Exploration\dms-002.png)
+![Fig2](Images/AWS Exploration/dms-002.png)
 
 
 ## Pulling the data from the Cloud Formation template
 
-![Fig3](Images/AWS Exploration\dms-003.png)
+![Fig3](Images/AWS Exploration/dms-003.png)
 
 
 
 ## Creating a stack 
 
-![Fig4](Images/AWS Exploration\dms-003.png)
+![Fig4](Images/AWS Exploration/dms-003.png)
 The only change here would be accessing from the above picture is that we are operating from the EAST-1 region of AWS.
 
 
 ## Looking for the status of DMS Stack
 
-![Fig5](Images/AWS Exploration\PS1.JPG)
+![Fig5](Images/AWS Exploration/PS1.JPG)
 
 
 
 ## Looking for the status of DMS and verifying whether the load complete status
 
-![Fig6](Images/AWS Exploration\dms-008.png)
+![Fig6](Images/AWS Exploration/dms-008.png)
 
-![Fig7](Images/AWS Exploration\dms-009.png)
+![Fig7](Images/AWS Exploration/dms-009.png)
 
 ## Verifying whether the load complete is successful 
 
 
-![Fig8](Images/AWS Exploration\PS2.png)
+![Fig8](Images/AWS Exploration/PS2.png)
 
 ## Looking at the tables on DynamoDB
 
-![Fig9](Images/AWS Exploration\dms-011.png)
+![Fig9](Images/AWS Exploration/dms-011.png)
 
-![Fig10](Images/AWS Exploration\dms-012.png)
+![Fig10](Images/AWS Exploration/dms-012.png)
 
 ## Reporting the results on Dynamo DB
 
-![Fig11](Images/AWS Exploration\PS3.png)
+![Fig11](Images/AWS Exploration/PS3.png)
 
 
 ## Accessing the S3 bucket
 
-![Fig12](Images/AWS Exploration\s3-001.png)
+![Fig12](Images/AWS Exploration/s3-001.png)
 
-![Fig14](Images/AWS Exploration\PS4.png)
+![Fig14](Images/AWS Exploration/PS4.png)
 
 The data is loaded into the bucket "525301199690-reinvent-2018-data"
 
 ## Create a Kinesis Firehose Stream
 
-![Fig18](Images/AWS Exploration\firehose-001.png)
+![Fig18](Images/AWS Exploration/firehose-001.png)
 
-![Fig19](Images/AWS Exploration\firehose-002.png)
+![Fig19](Images/AWS Exploration/firehose-002.png)
 
 ## Streaming
 
@@ -110,9 +110,9 @@ Now that we have loaded all the data on S3 bucket. We want the create a static d
 **Amazon Kinesis** makes it easy to collect, process, and analyze real-time, streaming data so you can get timely insights and react quickly to new information. Amazon Kinesis offers key capabilities to cost-effectively process streaming data at any scale, along with the flexibility to choose the tools that best suit the requirements of your application. With Amazon Kinesis, you can ingest real-time data such as video, audio, application logs, website clickstreams, and IoT telemetry data for machine learning, analytics, and other applications. Amazon Kinesis enables you to process and analyze data as it arrives and respond instantly instead of having to wait until all your data is collected before the processing can begin.
 
 
-![Fig15](Images/AWS Exploration\lambda-001.png)
+![Fig15](Images/AWS Exploration/lambda-001.png)
 
-![Fig16](Images/AWS Exploration\lambda-002.png)
+![Fig16](Images/AWS Exploration/lambda-002.png)
 
 The following code has to be pasted in lamba_function.py of the created function
 
@@ -132,8 +132,8 @@ def lambda_handler(event, context):
     s3 = boto3.client('s3')
     response = s3.get_object(Bucket="test-created-pranav", Key="data/partial-load/ratings-partial-load.csv")
     tsv =  str(response['Body'].read().decode('UTF-8'))
-    lines = tsv.split("\n")
-    for line in tsv.split("\n"):
+    lines = tsv.split("/n")
+    for line in tsv.split("/n"):
         val = line.split(",")
         data = json.dumps(getRating(val[0], val[1], val[2], val[3]))
         kinesis.put_record(StreamName=bigdataStreamName, Data=data, PartitionKey="rating")
@@ -150,7 +150,7 @@ def getRating(userId, itemId, ratingId, timestamp):
 ```
 
 
-![Fig17](Images/AWS Exploration\PS5.png)
+![Fig17](Images/AWS Exploration/PS5.png)
 
 ## Using Amazon Glue to transform the data from the S3 and DynamoDB 
 
@@ -173,49 +173,49 @@ We are using the Amazon Glue to the following tasks to our tables:
 
 ### Populating the s3 glue data catalog
 
-![Fig20](Images/AWS Exploration\glue-001.png)
+![Fig20](Images/AWS Exploration/glue-001.png)
 
-![Fig21](Images/AWS Exploration\glue-002.png)
-
-
-
-![Fig22](Images/AWS Exploration\glue-003.png)
+![Fig21](Images/AWS Exploration/glue-002.png)
 
 
-![Fig23](Images/AWS Exploration\glue-004.png)
+
+![Fig22](Images/AWS Exploration/glue-003.png)
 
 
-![Fig24](Images/AWS Exploration\glue-005.png)
+![Fig23](Images/AWS Exploration/glue-004.png)
 
 
-![Fig25](Images/AWS Exploration\glue-006.png)
+![Fig24](Images/AWS Exploration/glue-005.png)
+
+
+![Fig25](Images/AWS Exploration/glue-006.png)
 
 
 ### Populating the dynamodb glue data catalog
 
 
-![Fig26](Images/AWS Exploration\glue-007.png)
+![Fig26](Images/AWS Exploration/glue-007.png)
 
 
 
-![Fig27](Images/AWS Exploration\glue-008.png)
+![Fig27](Images/AWS Exploration/glue-008.png)
 
 
 
-![Fig28](Images/AWS Exploration\glue-009.png)
+![Fig28](Images/AWS Exploration/glue-009.png)
 
 
 
-![Fig29](Images/AWS Exploration\glue-010.png)
+![Fig29](Images/AWS Exploration/glue-010.png)
 
 
 
-![Fig30](Images/AWS Exploration\glue-011.png)
+![Fig30](Images/AWS Exploration/glue-011.png)
 
 
 The tables in the Amazon Glue
 
-![Fig31](Images/AWS Exploration\PS6.png)
+![Fig31](Images/AWS Exploration/PS6.png)
 
 ###   Script to transform data from Glue
 ```{r GLUE, eval=FALSE }
@@ -256,7 +256,7 @@ datasource0 = datasource0.filter(datasource0["userid"].isNotNull())
 
 #ratings
 datasource1 = datasource_ratings.toDF()
-datasource1 = datasource1.withColumn("timestamp_c",regexp_replace("timestamp_c", "\"", ""))
+datasource1 = datasource1.withColumn("timestamp_c",regexp_replace("timestamp_c", "/"", ""))
 datasource1 = datasource1.withColumn("userid", expr("CAST(userid AS INTEGER)"))
 datasource1 = datasource1.withColumn("movieid", expr("CAST(movieid AS INTEGER)"))
 datasource1 = datasource1.select(["userid", "movieid", "rating", "timestamp_c"])
@@ -270,8 +270,8 @@ dfUnion.coalesce(1).write.option("header", "true").csv("s3://" + s3_bucket + "/m
 #movies
 datasource2 = datasource_movies.toDF()
 datasource2 = datasource2.withColumn("movieid", expr("CAST(movieid AS INTEGER)"))
-datasource2 = datasource2.withColumn("genres",regexp_replace("genres", "\"", ""))
-datasource2 = datasource2.withColumn("title",regexp_replace("title", "\"", ""))
+datasource2 = datasource2.withColumn("genres",regexp_replace("genres", "/"", ""))
+datasource2 = datasource2.withColumn("title",regexp_replace("title", "/"", ""))
 datasource2 = datasource2.select(["movieid", "title", "genres"]).sort(asc("movieid"))
 datasource2 = datasource2.filter(datasource2["movieid"].isNotNull())
 
@@ -280,7 +280,7 @@ datasource2.coalesce(1).write.option("header", "true").csv("s3://" + s3_bucket +
 #links
 datasource3 = datasource_links.toDF()
 datasource3 = datasource3.withColumn("movieid", expr("CAST(movieid AS INTEGER)"))
-datasource3 = datasource3.withColumn("tmdbid",regexp_replace("tmdbid", "\"", ""))
+datasource3 = datasource3.withColumn("tmdbid",regexp_replace("tmdbid", "/"", ""))
 datasource3 = datasource3.select(["movieid", "imdbid", "tmdbid"]).sort(asc("movieid"))
 datasource3 = datasource3.filter(datasource3["movieid"].isNotNull())
 
