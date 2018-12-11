@@ -24,7 +24,7 @@ Recommendation engines account for a huge share of revenue and user activity, of
 
 Without a doubt, big data is the driving force behind recommender systems. A good recommender engine should be reliable, scalable, highly available, and be able to provide personalized recommendations, in real time, to the large user base it contains. There has been a large advancement of the algorithms in the recommender system space but their scalable implementations are still lacking in some sense. A famous example is the $1 million prize that Netflix awarded to a developer team in 2009 for an algorithm that increased the accuracy of the company's recommendation engine by 10 percent. Netflix never used the winning solution due to "engineering costs", according to Netflix the increase in accuracy on the winning improvements "did not seem to justify the engineering effort needed to bring them into a production environment," according to their blog post. This goes to highlight the importance of scaling recommender systems. Looking at the rate at which Netflix’s customer base has been increasing over the years, they do not just need an accurate recommender system in place, but also the infrastructure to support and scale it to the level of big data.
 
-![Netflix_subscriptions](Netflix_subscriptions.jpeg)
+![Netflix_subscriptions](Images/Netflix_subscriptions.jpg)
 
 ## Process Pipeline
 
